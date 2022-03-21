@@ -4,8 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 // Routes
 import { appRouting } from './app.routes';
 
-// Services
-
 // Components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
