@@ -2,7 +2,10 @@
 <hr />
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col" *ngFor="let heroe of heroes">
+  <div
+    class="col animated fadeIn fast"
+    *ngFor="let heroe of heroes; let i = index"
+  >
     <div class="card">
       <img [src]="heroe.img" class="card-img-top" [alt]="heroe.name" />
       <div class="card-body">
@@ -12,9 +15,20 @@
           <small class="text-muted">{{ heroe.date }}</small>
         </p>
         <div class="d-grid">
-          <button type="button" class="btn btn-outline-primary">
+          <button
+            (click)="seeHeroe(i)"
+            type="button"
+            class="btn btn-outline-primary"
+          >
             Ver más...
           </button>
+
+          <a
+            [routerLink]="['/heroe', i]"
+            href="#"
+            class="btn btn-outline-primary"
+            >Ver más link...</a
+          >
         </div>
       </div>
     </div>
