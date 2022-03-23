@@ -1,0 +1,34 @@
+<div class="col animated fadeIn fast">
+  <div class="card">
+    <img [src]="hero.image" class="card-img-top" [alt]="hero.name" />
+
+    <div class="card-body">
+      <h5 class="card-title">{{ hero.name }}</h5>
+
+      <p class="card-text">{{ hero.bio }}</p>
+
+      <p class="card-text">
+        <small class="text-muted">{{ hero.date }}</small>
+      </p>
+
+      <div class="d-grid">
+        <button
+          (click)="getHero()"
+          type="button"
+          class="btn btn-outline-primary"
+        >
+          Ver más...
+        </button>
+
+        <!--
+        <a
+          [routerLink]="['/hero', i]"
+          href="#"
+          class="btn btn-outline-primary"
+          >Ver más...</a
+        >
+        -->
+      </div>
+    </div>
+  </div>
+</div>

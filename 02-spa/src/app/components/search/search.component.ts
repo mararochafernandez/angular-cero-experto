@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroesService, Hero } from '../../services/heroes.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -12,22 +12,13 @@ export class SearchComponent implements OnInit {
 
   constructor(
     private heroesService: HeroesService,
-    private activatedRoute: ActivatedRoute,
-    private router: Router
-  ) {
-    this.activatedRoute.params.subscribe((params) => {
-      this.term = params['term'];
-    });
-  }
+    private activatedRoute: ActivatedRoute
+  ) {}
 
   ngOnInit() {
     this.activatedRoute.params.subscribe((params) => {
       this.term = params['term'];
       this.heroes = this.heroesService.searchHeroes(params['term']);
     });
-  }
-
-  seeHero(idx: number) {
-    this.router.navigate(['/hero', idx]);
   }
 }
