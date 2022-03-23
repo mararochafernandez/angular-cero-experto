@@ -1,5 +1,6 @@
 <h1 class="animated fadeIn">
-  {{ hero.name }} <small class="text-muted">{{ hero.date }}</small>
+  {{ hero.name | uppercase }}
+  <small class="text-muted">({{ hero.date | date: "y" }})</small>
 </h1>
 
 <hr />
