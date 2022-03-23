@@ -9,13 +9,10 @@ import { Router } from '@angular/router';
 export class HeroesComponent implements OnInit {
   heroes: Hero[] = [];
 
-  constructor(private heroesService: HeroesService, private router: Router) {
-    //console.log('constructor');
-  }
+  constructor(private heroesService: HeroesService, private router: Router) {}
 
   ngOnInit() {
     this.heroes = this.heroesService.getHeroes();
-    //console.log(this.heroes);
   }
 
   seeHero(idx: number) {

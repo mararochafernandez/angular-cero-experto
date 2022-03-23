@@ -44,11 +44,19 @@
         <input
           class="form-control me-2"
           type="search"
-          placeholder="Search"
+          placeholder="Héroe"
           aria-label="Search"
+          (keyUp.enter)="searchHeroes(searchText.value)"
+          #searchText
         />
 
-        <button class="btn btn-outline-primary" type="submit">Search</button>
+        <button
+          (click)="searchHeroes(searchText.value)"
+          class="btn btn-outline-primary"
+          type="button"
+        >
+          Buscar
+        </button>
       </form>
     </div>
   </div>
