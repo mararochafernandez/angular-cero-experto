@@ -6,6 +6,10 @@ body {
   margin-top: 20px;
 }
 
+.img-logo {
+  height: 30px;
+}
+
 /* Animations */
 
 .animated {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroesService, Heroe } from '../../services/heroes.service';
+import { HeroesService, Hero } from '../../services/heroes.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './heroes.component.html',
 })
 export class HeroesComponent implements OnInit {
-  heroes: Heroe[] = [];
+  heroes: Hero[] = [];
 
   constructor(private heroesService: HeroesService, private router: Router) {
     //console.log('constructor');

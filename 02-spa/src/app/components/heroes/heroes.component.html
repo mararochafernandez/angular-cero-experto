@@ -1,4 +1,5 @@
 <h1>Héroes <small class="text-muted">Marvel y DC</small></h1>
+
 <hr />
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -8,12 +9,16 @@
   >
     <div class="card">
       <img [src]="heroe.img" class="card-img-top" [alt]="heroe.name" />
+
       <div class="card-body">
         <h5 class="card-title">{{ heroe.name }}</h5>
+
         <p class="card-text">{{ heroe.bio }}</p>
+
         <p class="card-text">
           <small class="text-muted">{{ heroe.date }}</small>
         </p>
+
         <div class="d-grid">
           <button
             (click)="seeHeroe(i)"
@@ -23,12 +28,14 @@
             Ver más...
           </button>
 
+          <!--
           <a
             [routerLink]="['/heroe', i]"
             href="#"
             class="btn btn-outline-primary"
-            >Ver más link...</a
+            >Ver más...</a
           >
+          -->
         </div>
       </div>
     </div>
