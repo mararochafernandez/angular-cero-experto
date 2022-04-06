@@ -1,0 +1,191 @@
+<h1>Pipes <small class="text-muted">Angular</small></h1>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>Variable</th>
+          <th>Pipe</th>
+          <th>Salida</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>{{ name }}</td>
+          <td>uppercase</td>
+          <td>{{ name | uppercase }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ name }}</td>
+          <td>lowercase</td>
+          <td>{{ name | lowercase }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ name }}</td>
+          <td>slice :3</td>
+          <td>{{ name | slice: 3 }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ name }}</td>
+          <td>slice: 0:3</td>
+          <td>{{ name | slice: 0:3 }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ name }}</td>
+          <td>slice: 1:5</td>
+          <td>{{ name | slice: 1:5 }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ pi }}</td>
+          <td>number: "3.0-0"</td>
+          <td>{{ pi | number: "3.0-0" }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ pi }}</td>
+          <td>number: ".0-2"</td>
+          <td>{{ pi | number: ".0-2" }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ percent }}</td>
+          <td>percent</td>
+          <td>{{ percent | percent }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ percent }}</td>
+          <td>percent: "2.2-2"</td>
+          <td>{{ percent | percent: "2.2-2" }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ salary }}</td>
+          <td>currency: "EUR"</td>
+          <td>{{ salary | currency: "EUR" }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ salary }}</td>
+          <td>currency: "CAD":"symbol-narrow":".0-0"</td>
+          <td>{{ salary | currency: "CAD":"symbol-narrow":".0-0" }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ promiseValue }}</td>
+          <td>async</td>
+          <td>{{ promiseValue | async }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ date }}</td>
+          <td>date</td>
+          <td>{{ date | date }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ date }}</td>
+          <td>date: "medium"</td>
+          <td>{{ date | date: "medium" }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ date }}</td>
+          <td>date: "short"</td>
+          <td>{{ date | date: "short" }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ date }}</td>
+          <td>date: "MMMM - dd"</td>
+          <td>{{ date | date: "MMMM - dd" }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ date }}</td>
+          <td>date | date: "MMMM - dd":"":"en"</td>
+          <td>{{ date | date: "MMMM - dd":"":"en" }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ date }}</td>
+          <td>date | date: "MMMM - dd":"":"fr"</td>
+          <td>{{ date | date: "MMMM - dd":"":"fr" }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ date }}</td>
+          <td>
+            date | date: "MMMM - dd":"":"{{ language }}"
+            <br />
+            <button (click)="language = 'es'" class="btn btn-primary">
+              Español
+            </button>
+            <button (click)="language = 'en'" class="btn btn-secondary">
+              Inglés
+            </button>
+            <button (click)="language = 'fr'" class="btn btn-success">
+              Francés
+            </button>
+          </td>
+          <td>{{ date | date: "MMMM - dd":"":language }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ myname }}</td>
+          <td>capitalize: true</td>
+          <td>{{ myname | capitalize }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ name }}</td>
+          <td>
+            password: {{ active }}
+            <br />
+            <button (click)="active = !active" class="btn btn-primary">
+              Activar/Desactivar
+            </button>
+          </td>
+          <td>{{ name | password: active }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Slice</h4>
+    <ul>
+      <li *ngFor="let number of numbers | slice: 5:20">{{ number }}</li>
+    </ul>
+
+    <h3>JSON</h3>
+    <hr />
+    <div class="row mb-5">
+      <div class="col">
+        <pre>{{ hero | json }}</pre>
+      </div>
+    </div>
+
+    <h3>DOM seguro</h3>
+    <hr />
+    <div class="row mb-5">
+      <div class="col">
+        <iframe
+          width="560"
+          height="315"
+          [src]="videoURL | safedom"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</div>
