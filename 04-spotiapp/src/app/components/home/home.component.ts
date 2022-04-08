@@ -21,7 +21,7 @@ export class HomeComponent {
     */
 
     this.spotify.getNewReleases().subscribe((data: any) => {
-      this.newReleases = data.albums.items;
+      this.newReleases = data;
     });
   }
 }

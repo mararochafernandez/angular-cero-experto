@@ -4,6 +4,7 @@
 - Directivas, componentes, servicios y estructura de una aplicación.
 - Rutas, decoradores output e input, eventos.
 - Pipes, pipes personalizados, internalización.
+- Operador map.
 
 1. Aplicación #1: Hola Mundo
 2. Aplicación #2: Aplicación de una sola página (SPA)
