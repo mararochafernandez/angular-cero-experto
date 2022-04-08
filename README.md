@@ -1,4 +1,4 @@
-# Curso de Angular de cero a experto de Udemy
+# Angular: de cero a experto (Udemy)
 
 - TypeScript y ECMAScript 6.
 - Directivas, componentes, servicios y estructura de una aplicación.

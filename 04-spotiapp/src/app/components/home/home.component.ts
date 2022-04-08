@@ -9,14 +9,20 @@ import { SpotifyService } from '../../services/spotify.service';
 })
 export class HomeComponent {
   countries: any[] = [];
+  newReleases: any[] = [];
 
   constructor(private http: HttpClient, private spotify: SpotifyService) {
+    /*
     this.http
       .get('https://restcountries.com/v2/lang/es')
       .subscribe((data: any) => {
         this.countries = data;
       });
+    */
 
-    this.spotify.getNewReleases();
+    this.spotify.getNewReleases().subscribe((data: any) => {
+      console.log(data.albums.items);
+      this.newReleases = data.albums.items;
+    });
   }
 }

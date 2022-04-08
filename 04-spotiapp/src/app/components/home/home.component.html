@@ -1,5 +1,25 @@
-<ul>
-  <li *ngFor="let country of countries">
-    {{ country.name }} - {{ country.population | number }}
-  </li>
-</ul>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div *ngFor="let song of newReleases" class="col">
+    <div class="card">
+      <img [src]="song.images[0].url" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ song.name }}</h5>
+        <span *ngFor="let artist of song.artists" class="badge bg-dark">{{
+          artist.name
+        }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+<div class="row mt-5">
+  <div class="col">
+    <ul>
+      <li *ngFor="let country of countries">
+        {{ country.name }} - {{ country.population | number }}
+      </li>
+    </ul>
+  </div>
+</div>
+-->
