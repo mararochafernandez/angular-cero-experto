@@ -14,7 +14,7 @@
   <div *ngFor="let artist of artists" class="col">
     <div class="card">
       <img
-        [src]="artist.images[0].url"
+        [src]="artist.images | noimage"
         class="card-img-top"
         [alt]="artist.name"
       />
