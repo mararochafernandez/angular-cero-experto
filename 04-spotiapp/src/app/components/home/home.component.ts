@@ -10,6 +10,7 @@ import { SpotifyService } from '../../services/spotify.service';
 export class HomeComponent {
   countries: any[] = [];
   newReleases: any[] = [];
+  loading: boolean;
 
   constructor(private http: HttpClient, private spotify: SpotifyService) {
     /*
@@ -20,8 +21,11 @@ export class HomeComponent {
       });
     */
 
+    this.loading = true;
+
     this.spotify.getNewReleases().subscribe((data: any) => {
       this.newReleases = data;
+      this.loading = false;
     });
   }
 }

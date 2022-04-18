@@ -13,6 +13,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { routes } from './app.routes';
 import { NoImagePipe } from './pipes/noimage.pipe';
 import { CardsComponent } from './components/cards/cards.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
 //import { SpotifyService } from './services/spotify.service';
 
 @NgModule({
@@ -24,6 +25,7 @@ import { CardsComponent } from './components/cards/cards.component';
     NavbarComponent,
     NoImagePipe,
     CardsComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,

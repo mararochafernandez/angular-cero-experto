@@ -5,6 +5,7 @@
 - Rutas, decoradores output e input, eventos.
 - Pipes, pipes personalizados, internalización.
 - Operador map.
+- Bootstrap y Font Awesome.
 
 1. Aplicación #1: Hola Mundo
 2. Aplicación #2: Aplicación de una sola página (SPA)
