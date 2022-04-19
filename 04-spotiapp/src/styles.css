@@ -30,14 +30,18 @@ hr {
 }
 
 .img-thumb {
-  width: 50px !important;
-  height: 50px !important;
+  width: 80px !important;
+  height: 80px !important;
 }
 
 .audio {
   display: block;
   height: 50px;
   padding: 5px 0;
+}
+
+.iframe {
+  display: block;
 }
 
 /* Animations */

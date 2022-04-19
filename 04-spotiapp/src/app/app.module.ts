@@ -12,6 +12,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
 import { routes } from './app.routes';
 import { NoImagePipe } from './pipes/noimage.pipe';
+import { SafedomPipe } from './pipes/safedom.pipe';
 import { CardsComponent } from './components/cards/cards.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 //import { SpotifyService } from './services/spotify.service';
@@ -24,6 +25,7 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     ArtistComponent,
     NavbarComponent,
     NoImagePipe,
+    SafedomPipe,
     CardsComponent,
     LoadingComponent,
   ],

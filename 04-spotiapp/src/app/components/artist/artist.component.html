@@ -47,7 +47,15 @@
           <td class="align-middle">{{ track.album.name }}</td>
           <td class="align-middle">{{ track.name }}</td>
           <td class="align-middle text-end">
-            <audio class="audio" [src]="track.preview_url" controls></audio>
+            <!--<audio class="audio" [src]="track.preview_url" controls></audio>-->
+            <iframe
+              class="iframe"
+              [src]="track.id | safedom"
+              width="100%"
+              height="80"
+              frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            ></iframe>
           </td>
         </tr>
       </tbody>
