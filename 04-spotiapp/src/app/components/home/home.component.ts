@@ -11,6 +11,8 @@ export class HomeComponent {
   countries: any[] = [];
   newReleases: any[] = [];
   loading: boolean;
+  error: boolean = false;
+  errorMessage: string = 'Error';
 
   constructor(private http: HttpClient, private spotify: SpotifyService) {
     /*
@@ -23,9 +25,16 @@ export class HomeComponent {
 
     this.loading = true;
 
-    this.spotify.getNewReleases().subscribe((data: any) => {
-      this.newReleases = data;
-      this.loading = false;
-    });
+    this.spotify.getNewReleases().subscribe(
+      (data: any) => {
+        this.newReleases = data;
+        this.loading = false;
+      },
+      (serviceError) => {
+        this.loading = false;
+        this.error = true;
+        this.errorMessage = serviceError.error.error.message;
+      }
+    );
   }
 }
